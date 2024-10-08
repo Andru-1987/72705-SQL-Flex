@@ -1,0 +1,14 @@
+services:
+    mysql:
+        image: mysql/mysql-server:latest
+        container_name: mysql
+
+        restart: always
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: coderhouse
+        
+        volumes:
+            - ./workspace:/workspace
+

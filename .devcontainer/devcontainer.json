@@ -1,0 +1,31 @@
+{
+    "name": "MySQL Development Environment",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "mysql",
+    "workspaceFolder": "/workspace",
+    
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "mtxr.sqltools",
+                "mtxr.sqltools-driver-mysql"
+            ],
+            "settings": {
+                "sqltools.connections": [
+                    {
+                        "name": "MySQL Development",
+                        "driver": "MySQL",
+                        "server": "localhost",
+                        "port": 3306,
+                        "username": "root",
+                        "password": "coderhouse",
+                        "database": ""
+                    }
+                ]
+            }
+        }
+    },
+    
+    "forwardPorts": [3306],    
+    "postCreateCommand": "echo 'Container is ready for MySQL development!'"
+}
